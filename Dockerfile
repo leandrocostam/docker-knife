@@ -1,9 +1,11 @@
-FROM debian:jessie
+FROM debian:unstable-slim
 
 LABEL maintainer="leandrocostam@gmail.com"
 
 RUN apt-get update \
-    && apt-get install -y traceroute \
+    && apt-get dist-upgrade -y \
+    && apt-get install -y \
+    traceroute \
     curl \
     wget \
     dnsutils \
@@ -15,6 +17,13 @@ RUN apt-get update \
     mtr \
     iperf3 \
     git \
+    iproute2 \
+    siege \
+    apache2-utils \
+    openssl \
+    openssh-client \ 
+    nvi \
+    less \
     && rm -rf /var/lib/apt/lists/*
 
 COPY Dockerfile /Dockerfile
