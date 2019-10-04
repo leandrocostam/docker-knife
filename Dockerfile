@@ -11,6 +11,7 @@ RUN apt-get update \
     jq \
     nmap \ 
     net-tools \
+    tcpdump \
     mtr \
     iperf3 \
     git \
