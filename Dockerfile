@@ -14,7 +14,7 @@ RUN apt-get update \
     nmap \ 
     net-tools \
     tcpdump \
-    mtr \
+    mtr-tiny \
     iperf3 \
     git \
     iproute2 \
