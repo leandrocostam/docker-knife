@@ -5,13 +5,30 @@
 Container based on Debian with a few utilities installed for troubleshooting:
 
 - curl
+- traceroute
 - wget
 - dnsutils
 - netcat
 - jq
 - nmap
 - net-tools (ifconfig, netsat, arp, rarp, route, etc)
-- traceroute
-- mtrdock
+- tcpdump
+- mtr-tiny
+- iperf3
+- openssl / openssl-client
 - nmap
+- nvi
 - git
+- less
+
+## How to run
+
+Running as standalone container:
+```sh
+docker run -it leandrocostam/knifetools
+```
+
+Running by sharing the network namespce for the specified container (already running):
+```sh
+docker run -it --network=container:<containerName> leandrocostam/knifetools
+```
